@@ -1,0 +1,7 @@
+rep_localstack/
+__pycache__/
+*.pyc
+function.zip
+response.json
+trust-policy.json
+.localstack-tp.env
