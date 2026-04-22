@@ -22,17 +22,14 @@ Difficulté : Simple (~5 minutes)
 Dans le terminal du Codespace copier/coller les codes ci-dessous etape par étape :  
 
 **Installation de l'émulateur LocalStack**  
-```
-sudo -i mkdir rep_localstack
-```
-```
-sudo -i python3 -m venv ./rep_localstack
-```
-```
-sudo -i pip install --upgrade pip && python3 -m pip install localstack && export S3_SKIP_SIGNATURE_VALIDATION=0
-```
-```
+cd /workspaces/API_Driven
+python3 -m venv rep_localstack
+source rep_localstack/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install localstack
+localstack auth set-token "TON_TOKEN_LOCALSTACK"
 localstack start -d
+localstack status services
 ```
 **vérification des services disponibles**  
 ```
